@@ -1,0 +1,65 @@
+{% extends "adminbase.html" %}
+{% block body %}
+   <h3 style="text-align:center; color:#000000">
+       Booking of Agro products
+   </h3>
+   <div class="row">
+       <div class="col-sm-3"></div>
+       <div class="col-sm-6">
+           <form action="{% url 'adminapp:mlook' %}" method="post">
+               {% csrf_token  %}
+               <div class="form-group">
+                   <label>Name</label>
+                   <input name="name" type="text" class="form-control" value="{{mi.name}}" readonly="true"/>
+               </div>
+               <div class="form-group">
+                    <label>Firm Name</label>
+                    <input name="firmname" type="text" class="form-control" value="{{ mi.firmname }}" readonly="true"/>
+                </div>
+               <div class="form-group">
+                    <label>Firm Address</label>
+                    <textarea name="firmaddress" class="form-control" readonly="true">{{mi.firmaddress}} </textarea>
+                </div>
+                <div class="form-group">
+                   <label>Contract No</label>
+                   <input name="contactno" type="number" class="form-control"  value="{{mi.contactno}}" readonly="true"/>
+
+                </div>
+                <div class="form-group">
+                   <label>Aadhaar No </label>
+                   <input  name="aadhaarno" type="number" class="form-control" value="{{mi.aadhaarno}}" readonly="true"/>
+                </div>
+                <div class="'form-group">
+                    <label>PAN No</label>
+                    <input name="panno" type="text" class="form-control" value="{{mi.panno}}" readonly="true"/>
+                </div>
+                <div class="form-group">
+                    <label>GST NO </label>
+                    <input name="gstno" type="text" class="form-control" value="{{mi.gstno}}" readonly="true"/>
+                </div>
+                <div>
+                    <label>Demand  of Merchant in KG</label>
+                    <input name="demand" type="number" class="form-control" value="{{mi.demand}}" readonly="true"/>
+                </div>
+
+                <div class="form-group">
+                   <label>Demand Fullfill in KG</label>
+                   <input  name="ninkg" type="number" class="form-control" required="true"/>
+                </div>
+                <div class="form-group">
+                   <label>Rate per KG</label>
+                   <input  name="rate" type="number" class="form-control" required="true"/>
+                </div>
+                <div class="form-group">
+                   <label>Advance amount</label>
+                   <input  name="advance" type="number" class="form-control" required="true"/>
+                </div>
+                <div class="form-group m-2">
+
+                   <input type="submit" value="sumbit" class="btn btn-danger text-center d-grid gap-2 col-3 mx-auto "/>
+                </div>
+           </form>
+        </div> 
+       <div class="col-sm-3"></div>
+   </div>
+{% endblock %}

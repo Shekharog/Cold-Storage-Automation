@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Cold Storage.in</title>
+    <link href="{% static 'image/bharat.png' %}" rel="icon"/>
+    <link href="{% static 'css/bootstrap.css' %}" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css "  integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="{% static 'js/bootstrap.bundle.js' %}" type="text/javascript" rel="javascript">
+    </script>
+    <style>
+    .co
+        {height:150px;
+        width:150px;
+        margin:0px auto;
+        border-radius:50%;
+        background-color:white;
+        overflow: hidden;
+
+        }
+    .co img
+        {height:200px;
+        width:200px;
+        }
+      a
+        {text-decoration: none;
+        color:white;
+        }
+        a:hover {
+        color: #092CBB;}
+       .d
+        {color:black;
+        }
+       span:hover
+        {color: #092CBB;
+        }
+      .n{
+       border-radius:0px 5px 5px 0px;}
+
+    </style>
+</head>
+<body>
+<!--------outer------>
+<div class="container-fluid  ">
+    <div class="row bg-success py-2">
+        <!--------headline------>
+        <div class="col-sm-3 bg-success text-light d"><i class="fa-solid fa-phone-flip"></i> <a href="" >Call us +91 5569689422</a>
+        </div>
+        <div class="col-sm-4 bg-success text-light"><i class="fa-solid fa-envelope"></i> <a href="https://accounts.google.com/signup/v2/webcreateaccount?continue=http%3A%2F%2Fsupport.google.com%2Fmail%2F&hl=en-IL&biz=true&flowName=GlifWebSignIn&flowEntry=SignUp" target="_blank" >Mail us:bharat2018@gmail.com </a>
+        </div>
+        <div class="col-sm-3 bg-success text-light"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/" target="_blank" >Bharatofficial </a>
+        </div>
+        <div class="col-sm-2 bg-success text-light" style="padding-left:20px;" > <i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/" target="_blank" > Bharat storage </a>
+        </div>
+        <!--------headline close------>
+    </div>
+</div>
+<!--------menu open------>
+ <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+        <nav class="navbar navbar-expand-lg ">
+                <!--<div class="container-fluid">--->
+                    <a class="navbar-brand  py-0 " href="#"> <img src="{% static 'image\bharat.png' %}" alt=""  width='50px' height='50px'/></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">                <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'index'%}"> Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'about'%}">About Us </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Registration</a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{% url 'farmerreg'%}">Farmer</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="{% url 'merchantreg'%}">Merchant</a></li>
+                    </ul>
+
+                    </li>
+                    <li class="nav-item">
+                    <a href="{% url 'login'%}" class="btn btn-success text-light"> Login Portal</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'contact'%}">Contact Us</a>
+                    </li>
+                    </ul>
+
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            <!--</div>-->
+            </nav>
+        </div>
+    </div>
+</div>
+<!--------menu close------>
+<!--------slider open------>
+    <div class="container-fluid p-0">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'image/FMI_Images/slider_1.jpg' %}" height="550px" class="d-block w-100 " alt="...">
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="{% static 'image/FMI_Images/slider_2.jpg' %}" height="550px"  class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'image/FMI_images/slider_3.png' %}" height="550px"  class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'image/FMI_Images/slider_4.jpg' %} " height="550px"  class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'image/FMI_Images/slider_5.jpg' %}" height="550px"  class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'image/s13.jpg' %}" height="550px"  class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+    </div>
+<!-----slide close------>
+<!--------------main container----->
+<div class="container-fluid">
+    <!-------Notice Board--------->
+    <div class="row mt-1" >
+        <div class="col-sm-3 text-center"  style="max-height:fit-content ;" >
+            <h4> Notice Board</h4>
+            <marquee behaviour="alternate" height="630px" direction="down" scrollamount="12"   >
+                   {% for n in ns %}
+                     <p style="color:Red; ">{{n.newstext}}</p>
+                    {% endfor %}
+            </marquee>
+        </div>
+ <!----Board close-->
+  <!----col 9----->
+        <div class="col-sm-9 " style="max-height:fit-content ;">
+        {% block body %}
+
+        {% endblock body %}
+        </div>
+    </div>
+<div>
+     <div class="row p-1" style="background-color:rgba(0, 0, 0, 0.5)">
+         <div class="col-sm-4 text-light text-center py-5" style="width: 10 auto; " >
+             <img src="{% static 'image/bharat.png' %}" height="200px">
+             <h2>Bharat cold Storage Ltd</h2>
+             <p> Live Fresh </p>
+         </div>
+         <div class="col-sm-8">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13245.977542743594!2d80.88478577825825!3d26.778069580970257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1663232347143!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+
+     </div>
+</div>
+<div class="row">
+ <div class="  p-0 container-fluid  card text-center">
+  <div class=" card-header bg-success text-light">
+    About us
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> Bharat Cold Storage Ltd</h5>
+    <p class="card-text">  Freshly product  24X7 <br/>  Address : 36B,Transport Nagar , Lucknow 226104, U.P. </p>
+      <div class="row">
+          <div class="col-sm-3">
+             <i class="fa-solid fa-hand-holding-hand"></i> <a href="https://www.youtube.com/watch?v=2Q_ZzBGPdqE" target="_blank" class="d" >Help </a>
+          </div>
+          <div class="col-sm-3">
+              <i class="fa-solid fa-question" ></i> <a href="" target="_blank" class="d" > <b> FAQ</b> </a>
+          </div>
+          <div class="col-sm-3">
+            <i class="fa-solid fa-square-rss"></i> <a href="https://www.wionews.com/" target="_blank" class="d "> In News</a>
+          </div>
+          <div class="col-sm-3  ">
+              <i class="fa-solid fa-mobile-screen-button"></i> <a href="https://play.google.com/store/apps" target="_blank"  class="d"  > Our Mobile app</a>
+          </div>
+      </div>
+  </div>
+  <div class="card-footer  bg-success text-light">
+    <i class="fa-solid fa-copyright"></i> <span> all copyright Reserve 2012</span>
+  </div>
+</div>
+</div>
+</div>
+<!--------------main container close----->
+<!--------outer end------>
+</body>
+</html>

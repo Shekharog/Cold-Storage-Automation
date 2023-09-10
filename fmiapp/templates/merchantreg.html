@@ -1,0 +1,61 @@
+{% extends "Base.html"%}
+{%block body%}
+<h3 style="text-align:center; color:#0c0d0d;"> This is Merchant Registration Form </h3>
+{%if msg %}
+        <p style="text-align:center;"> {{ msg }}</p>
+    {% endif %}
+<form action="{% url 'mreg' %}" method="post">
+    {% csrf_token %}
+    <div class="row py-2">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Enter Firm Owner Name : <span style="color:red;">*</span></label>
+                <input type="text" name="name" required="true" class="form-control" placeholder="Enter Owner name"/>
+            </div>
+            <div class="form-group">
+                <label>Gender</label><br/>
+                <input type="radio" name="gender" value="Male" required="true"  />Male<br/>
+                <input type="radio" name="gender" value="Female" required="true" />Female
+            </div>
+            <div class="form-group">
+                <label>Enter Firm Name</label>
+                <input type="text" name="firmname" required="true" class="form-control" placeholder="Enter your Firm name"/>
+            </div>
+            <div class="form-group">
+                <label>Enter Firm Address</label>
+                <textarea name="firmaddress" class="form-control" placeholder="Enter your address...."></textarea>
+            </div>
+            <div class="form-group">
+                <label> Enter Contact Number: </label>
+                <input type="number" name="contactno" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label> Enter Email: </label>
+                <input type="text" name="emailaddress" required="true" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label> Enter Aadhaar No : <span style="color:red;">*</span> </label>
+                <input type="number" name="aadhaarno" required="true" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label> Enter PAN No:<span style="color:red;">*</span> </label>
+                <input type="text" name="panno"  required="true" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label> Enter GST No:<span style="color:red;">*</span> </label>
+                <input type="text" name="gstno"  required="true" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label> Enter Demand in KG : <span style="color:red;">*</span> </label>
+                <input type="number" name="demand" required="true" class="form-control" >
+            </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn bg-success d-grid gap-2 col-4 mx-auto text-light"/>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</form>
+{%endblock body%}

@@ -1,0 +1,30 @@
+{% extends "adminbase.html" %}
+{% block body %}
+<h2 style="color:#050505; text-align:center;"> Closing of Farmer A/c </h2>
+<div >
+    <table style="width:80%; max-height: fit-content; margin:0 auto; background-color: #0000002a; border :2px solid Black;">
+        <tr>
+            <th >Name</th>
+            <th >Aadhaar Number</th>
+            <th >Total Amt</th>
+            <th >Advance</th>
+            <th >Rest Amt</th>
+            <th >Pay Amt</th>
+        </tr>
+        {% for b in bk%}
+
+        <tr>
+            <td >{{b.name}}</td>
+            <td >{{b.aadhaarno}}</td>
+            <td >{{b.totalamt}}</td>
+            <td >{{b.advance}}</td>
+            <td >{{b.restamt}}</td>
+            <td >
+               <a href="{% url 'adminapp:pay' ano=b.aadhaarno %}">PAY</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock body %}

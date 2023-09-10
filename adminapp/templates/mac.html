@@ -1,0 +1,29 @@
+{% extends "adminbase.html" %}
+{% block body %}
+<h3 style="color:#000000; text-align:center;"> Closing of Merchant A/c </h3>
+<div >
+    <table  class="text-center" style="width:80%; margin:0 auto; background-color: #0000002a; border: 2px solid Black ; ">
+        <tr >
+            <th >Name</th>
+            <th >Aadhaar Number</th>
+            <th >Total Amt</th>
+            <th >Advance</th>
+            <th >Rest Amt</th>
+            <th >Pay Amt</th>
+        </tr>
+        {% for b in ma %}
+        <tr>
+            <td >{{b.name}}</td>
+            <td >{{b.aadhaarno}}</td>
+            <td >{{b.totalamt}}</td>
+            <td >{{b.advance}}</td>
+            <td >{{b.restamt}}</td>
+            <td >
+               <a href="{% url 'adminapp:macpay' mc=b.aadhaarno %}"> PAY</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+{% endblock body %}

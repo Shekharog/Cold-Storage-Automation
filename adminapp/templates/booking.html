@@ -1,0 +1,38 @@
+{% extends "adminbase.html" %}
+{% block body %}
+ <h3 style="text-align:center; color:black;">
+     List Of Farmer
+ </h3>
+       {% if msg %}
+         <p style="text-align:center"> {{msg}}</p>
+       {% endif %}
+
+<div style="width:100%; Margin:0 auto;">
+    <table style="width:90%; Margin:0 auto; border:2px solid black" >
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Contact No.</th>
+            <th>Aadhaar No.</th>
+            <th>Booking</th>
+            <th>Views</th>
+        </tr>
+        {% for f in fi %}
+           <tr>
+               <td>{{f.name}}</td>
+               <td>{{f.gender}}</td>
+               <td>{{f.address}}</td>
+               <td>{{f.contactno}}</td>
+               <td>{{f.aadhaarno}}</td>
+               <td>
+                   <a href="{% url 'adminapp:book' ano=f.aadhaarno %}">Book</a>
+               </td>
+               <td>
+                   <a href="{% url 'adminapp:viewbook' ano=f.aadhaarno %}">view</a>
+               </td>
+           </tr>
+        {% endfor %}
+ </table>
+</div>
+{% endblock body %}

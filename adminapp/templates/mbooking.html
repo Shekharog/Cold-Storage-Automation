@@ -1,0 +1,47 @@
+{% extends "adminbase.html" %}
+{% block body %}
+<h3 style="text-align:center ; color:black">
+    List of Merchant
+</h3>
+
+<div style="width:100%; Margin:0 auto; height:100%;">
+    <table style="width:90%; margin: auto;  border:2px solid black;  background-color: #0000002a;" class="text-center py-1" >
+        <tr>
+            <th >Name</th>
+            <th >Gender</th>
+            <th >Firm Name</th>
+            <th >Firm Address</th>
+            <th >Contact No.</th>
+            <th >Email</th>
+            <th >Aadhaar No</th>
+            <th >PAN No</th>
+            <th >GST No</th>
+            <th >Demand in KG</th>
+            <th >Date</th>
+            <th >Booking</th>
+            <th >Views</th>
+        </tr>
+        {% for f in mi %}
+           <tr>
+               <td >{{f.name}}</td>
+               <td >{{f.gender}}</td>
+               <td >{{f.firmname}}</td>
+               <td >{{f.firmaddress}}</td>
+               <td >{{f.contactno}}</td>
+               <td >{{f.emailaddress}}</td>
+               <td >{{f.aadhaarno}}</td>
+               <td >{{f.panno}}</td>
+               <td >{{f.gstno}}</td>
+               <td >{{f.demand}}</td>
+               <td >{{f.regdate}}</td>
+               <td >
+                   <a href="{% url 'adminapp:mbook' m=f.aadhaarno %}">Book</a>
+               </td>
+               <td >
+                   <a href="{% url 'adminapp:mview' m=f.aadhaarno %}">View</a>
+               </td>
+           </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock body %}

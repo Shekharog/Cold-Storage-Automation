@@ -1,0 +1,37 @@
+{% extends "adminbase.html" %}
+{% block body %}
+<h3 style="color:#000000; text-align:center;">
+    Enquiries management
+</h3>
+<div style="width:100%; margin:0 auto; height:500px; ">
+    <table  style=" width:90%; margin:0 auto; background-color: #0000002a; border:1px solid black; ">
+        <tr>
+            <th class=" text-center"> ID  </th>
+            <th class=" text-center"> Name  </th>
+            <th class=" text-center"> Gender  </th>
+            <th class=" text-center"> Address  </th>
+            <th class=" text-center"> Contact No  </th>
+            <th class=" text-center"> Email Address  </th>
+            <th class=" text-center"> Equiry Text  </th>
+            <th class=" text-center"> Enquiry Date </th>
+            <th class=" text-center"> Delete </th>
+        </tr>
+        {% for e in enq  %}
+             <tr>
+                 <td class=" text-center">{{e.id}}</td>
+                 <td class=" text-center">{{e.name}}</td>
+                 <td class=" text-center">{{e.gender}}</td>
+                 <td class=" text-center">{{e.address}}</td>
+                 <td class=" text-center">{{e.contactno}}</td>
+                 <td class=" text-center">{{e.emailaddress}}</td>
+                 <td class=" text-center">{{e.enquirytext}}</td>
+                 <td class=" text-center">{{e.enquirydate}}</td>
+                 <td class=" text-center">
+                     <a href="{% url 'adminapp:deleteenq' id=e.id %}" >Delete</a>
+                 </td>
+             </tr>
+        {% endfor  %}
+
+    </table>
+</div>
+{% endblock body %}

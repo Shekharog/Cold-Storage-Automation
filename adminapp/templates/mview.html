@@ -1,0 +1,73 @@
+{% extends "adminbase.html" %}
+{% block body %}
+<h3 style="color:#000000; text-align:center;"> Booking details</h3>
+{% if msg %}
+        <p style="text-align:center">
+            {{ msg }}
+        </p>
+{% endif %}
+<div class="row">
+    <div class="col-sm-12">
+        {% if res %}
+        <table style="width:70%; margin-left:auto; height:500px;">
+            <tr>
+                <td>Name</td>
+                <td>{{res.name}}</td>
+            </tr>
+            <tr>
+                <td>Firm Name</td>
+                <td>{{res.firmname}}</td>
+            </tr>
+            <tr>
+                <td>Firm Address</td>
+                <td>{{res.firmaddress}}</td>
+            </tr>
+            <tr>
+                <td>Contact No</td>
+                <td>{{res.contactno}}</td>
+            </tr>
+            <tr>
+                <td>Aadhaar no </td>
+                <td>{{res.aadhaarno}}</td>
+            </tr>
+            <tr>
+                <td>PAN NO</td>
+                <td>{{res.panno}}</td>
+            </tr>
+            <tr>
+                <td>GST NO</td>
+                <td>{{res.gstno}}</td>
+            </tr>
+            <tr>
+                <td>Demand of Merchant in KG</td>
+                <td>{{res.demand}}</td>
+            </tr>
+            <tr>
+                <td>Demand Fullfill in KG  </td>
+                <td>{{res.ninkg}}</td>
+            </tr>
+            <tr>
+                <td>Rate Per KG</td>
+                <td>{{res.rate}}</td>
+            </tr>
+            <tr>
+                <td>Total Amount</td>
+                <td>{{res.totalamt}}/-</td>
+            </tr>
+            <tr>
+                <td>Advance</td>
+                <td>{{res.advance}}/-</td>
+            </tr>
+            <tr>
+                <td>Rest amount</td>
+                <td>{{res.restamt}}</td>
+            </tr>
+            <tr>
+                <td>Booking Date</td>
+                <td>{{res.bookingdate}}</td>
+            </tr>
+        </table>
+        {% endif %}
+    </div>
+</div>
+{% endblock body %}

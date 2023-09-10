@@ -1,0 +1,47 @@
+{% extends "Base.html"%}
+{%block body%}
+<h3 style="text-align:center; color:#009632 ;" > Fill this Form to Equiry </h3>
+{% if msg %}
+               <p style="text-align:center;"> {{ msg }}</p>
+{% endif %}
+    <div style="width:60%; margin:0 auto; ">
+        <div class="row p-2">
+            <div class="col-sm-12">
+                <form action="{% url 'saveenq'%}" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                           <label>Enter Your Name</label>
+                           <input type="text" name="name" required="True" placeholder="Enter your name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                         <label>Select Gender</label><br/>
+                         <input type="radio" name="gender" value="Male"/>Male
+                         <input type="radio" name="gender" value="Female"/>Female
+                    </div>
+                    <div class="form-group">
+                        <label>Enter your Address</label>
+                        <textarea name="address" class="form-control" placeholder="Enter your Address"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Contect No</label>
+                        <input type="number" name="contactno" required="True" class="form-control" placeholder="Enter phone Number"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Enter your Email Address </label>
+                        <input type="email" name="emailaddress" class="form-control" required="True" placeholder="Enter your Email"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Discrible Your Enquiry </label>
+                        <textarea name="enquirytext" class="form-control" placeholder="Enter your Enquiry...."></textarea>
+                    </div>
+                    <br/>
+                    <div class="form-group text-center">
+                        <input type="submit" value="submit" class="btn btn-success"/>
+                    </div>
+
+                 </form>
+            </div>
+        </div>
+    </div>
+
+{%endblock body%}
